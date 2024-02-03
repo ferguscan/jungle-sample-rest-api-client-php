@@ -1,0 +1,7 @@
+<?php
+
+return [
+    'openapi-file' => 'https://rest.ape.cafe/api/2023-05/openapi.json',
+    'namespace' => 'Jungle\Library\Generated',
+    'directory' => __DIR__ . '/generated',
+];

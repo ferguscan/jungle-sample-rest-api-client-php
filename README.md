@@ -26,7 +26,7 @@ JUNGLE_AUTH_HEADER="ApiKey your-api-key" php get-inventory.php
 
 ## SDK
 
-The SDK is generated automatically as follows:
+The SDK is generated automatically (using [Jane PHP](https://jane.readthedocs.io/en/latest/components/OpenAPI.html)) as follows:
 
 ```bash
 php vendor/bin/jane-openapi generate

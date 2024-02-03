@@ -19,7 +19,8 @@ while ($hasMore) {
   $inventory = backoff(function () use ($apiClient, $from, $headers, $locationId) {
     $inventory = $apiClient->inventoryFind(['locationId' => $locationId, 'from' => $from, 'limit' => 100.0], $headers);
 
-    // The above call may have failed.  The following line throws an exception if $inventory is null, triggering the backoff/retry process
+    // The above call may have failed, in which case $inventory will be null.
+    // If so, the following line will throw an exception, triggering the backoff/retry process
     $inventory->getPageInfo();
     return $inventory;
   });
